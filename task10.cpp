@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Enter the age in years: ";
-      int years;
-      cin>>years;
-      cout<<"Enter the days in one year: ";
-      int days;
-      cin>>days;
-      int age;
-      age=years*days;
-      cout<<"Age is:"<<age<<" days";
+      string my_password,user_enter;
+      my_password="Pass#@12345";
+      cout<<"Enter the password: ";
+      cin>>user_enter;
+      if(my_password==user_enter){
+        cout<<"Wow!You have cracked the code.";
       }
-      
+      else{
+        cout<<"Sorry,Please try again.";
+      }
+      }

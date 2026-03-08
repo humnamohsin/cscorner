@@ -1,18 +1,17 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Enter the number of wins(1 win=3 points): ";
-      int wins;
-      cin>>wins;
-      cout<<"Enter the number of draws(1 draw=1 point): ";
-      int draws;
-      cin>>draws;
-      cout<<"Enter the number of losses(1 loss=0 points): ";
-      int losses;
-      cin>>losses;
-      int points;
-      points=(wins*3)+(draws*1)+(losses*0);
-      cout<<"Points are:"<<points<<" ";
+      cout<<"Enter your bill: ";
+      int bill;
+      cin>>bill;
+      if(bill<=5000){
+        cout<<"There will be 5% discount in bill.";
       }
-      
-        
+      else{
+        cout<<"There will be 10% discount in bill.";
+      }
+      int discount;
+      discount=((discount/bill) * 100);
+      cout<<"Discount is:"<<discount<<" ";
+
+      }

@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Enter amount in pounds: ";
-      int pounds;
-      cin>>pounds;
-      int kilograms;
-      kilograms=pounds*kilograms;
+      cout<<"Please enter your name: ";
+      string name;
+      cin>>name;
+      if(name=="Ali"){
+        cout<<"Welcome"<<name<<endl;
 
-      cout<<"pounds"<<pounds<<" into kilograms are "<<kilograms;
+      }
       }

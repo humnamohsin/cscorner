@@ -1,10 +1,16 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Enter the time in hours: ";
-      int hours;
-      cin>>hours;
-      int seconds;
-      seconds=hours*60*60;
-      cout<<"time is:"<<seconds<<" s";
+      cout<<"Piease enter the number: ";
+      int num1;
+      cin>>num1;
+      cout<<"Please enter the second number: ";
+      int num2;
+      cin>>num2;
+      if(num1<num2){
+        cout<<"Number"<<num2<<"is greater than"<<num1;
+      }
+      else{
+        cout<<"Number"<<num1<<"is greater than"<<num2;
+      }
       }
