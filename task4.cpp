@@ -1,13 +1,12 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Enter the cost of the dress: ";
-      int cost;
-      cin>>cost;
-      if(cost<1500){
-        cout<<"Buy the dress";
+      for(int i= 0 ; i < 5 ; i++){
+        int number = 5;
+        for(int j = 0 ; j <= i ; j++){
+            cout<<number<<" ";
+            number--;
         }
-      if(cost>1500){
-        cout<<"Do not buy the dress";
-        }
-        }
+        cout<<endl;
+      }
+      }

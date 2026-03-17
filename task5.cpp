@@ -1,13 +1,12 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Are your friends going?(Press Y for yes)";
-      char going;
-      cin>>going;
-      if(going=='Y'){
-        cout<<"You are going.";
+      for(int i = 0 ; i <= 2 ; i++) //outer loop for rows
+      {
+        for(int j = 1 ; j <= 3 ; j++) //inner loop for columns
+        {
+            cout<<" * ";
         }
-      else{
-        cout<<"You are not going.";  
-        }
-        }
+        cout<<endl;
+      }
+}

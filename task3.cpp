@@ -1,11 +1,14 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Please enter your name: ";
-      string name;
-      cin>>name;
-      if(name=="Ali"){
-        cout<<"Welcome"<<name<<endl;
-
+      for(int rows = 1 ; rows <= 5 ; rows++) //outer loop for rows
+      {
+        for(int cols = 1 ; cols <= rows ; cols++)
+        {
+            cout<<" * ";
+        }
+        cout<<endl;
       }
-      }
+      
+      
+}

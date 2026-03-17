@@ -1,29 +1,10 @@
 #include <iostream>
-
 using namespace std;
-
-int main() {
-    int n;
-    int sum = 0;
-
-    cout << "Enter 5 numbers:" << endl;
-
-    cin >> n;
-    sum = sum + n;
-
-    cin >> n;
-    sum = sum + n;
-
-    cin >> n;
-    sum = sum + n;
-
-    cin >> n;
-    sum = sum + n;
-
-    cin >> n;
-    sum = sum + n;
-
-    cout << "Total sum: " << sum << endl;
-
-    return 0;
+main(){
+      int i = 1 , sum = 0;
+      while(i <= 5){
+        sum = sum + i;
+        i = i + 1;
+      }
+      cout<<sum<<endl;
 }

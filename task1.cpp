@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Enter the cost of the dress: ";
-      int cost;
-      cin>>cost;
-      if(cost<1500){
-        cout<<"Buy the dress";
-        
-      
+      char choice = 'y';
+      while(choice != 'n' && choice != 'n')
+      {
+        cout<<"I am happy!"<<endl;
+        cout<<"Enter your choice: ";
+        cin>>choice;
       }
-      }
+      cout<<"Program ends"<<endl;
+}

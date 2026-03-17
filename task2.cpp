@@ -1,10 +1,15 @@
 #include <iostream>
 using namespace std;
 main(){
-      cout<<"Are your friends going?";
-      char going;
-      cin>>going;
-      if(going == "Y"){
-        cout<<"You are also going!";
+      int num = 0 , sum = 0;
+      while(num >= 0)
+      {
+        sum = sum + num;
+        cout<<"Enter a number: ";
+        cin>>num;
       }
-      }
+      cout<<"sum: "<<sum;
+}
+      
+
+
