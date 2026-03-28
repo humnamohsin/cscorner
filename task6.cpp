@@ -1,12 +1,32 @@
 #include <iostream>
+#include <string>
 using namespace std;
-main(){
-      for(int i = 1 ; i <= 3 ; i++)
-      {
-        for(int j = 1 ; j <= 3 ; j++)
+
+bool check(string word,char letter)
+{
+    bool isFound = false;
+    for(int idx = 0 ; word[idx] != '\0' ; idx = idx + 1)
+    {
+        if(word[idx] == letter)
         {
-            cout<<j<<" ";
+            isFound = true;
+            break;
         }
-        cout<<endl;
-      }
+    }
+    return isFound;
+}
+int main()
+{
+          string word;
+          char letter;
+            cout<<"Enter a word: ";
+            cin>>word;
+            cout<<"Enter a letter to search for: ";
+            cin>>letter;
+            if(check(word,letter))
+                cout<<"Letter Found in the word";
+            else
+                cout<<"Letter Not Found in the word";
+            return 0;
+
 }

@@ -1,54 +1,31 @@
 #include <iostream>
 using namespace std;
-
-int main() {
-    int choice = 0;
-    float num1, num2;
-
-    while (choice != 6) {
-        cout << "\n--- Simple Calculator ---\n";
-        cout << "1. Addition\n";
-        cout << "2. Subtraction\n";
-        cout << "3. Multiplication\n";
-        cout << "4. Division\n";
-        cout << "5. Clear Screen\n";
-        cout << "6. Exit\n";
-        cout << "Enter your choice (1-6): ";
-        cin >> choice;
-
-        if (choice >= 1 && choice <= 4) {
-            cout << "Enter first number: ";
-            cin >> num1;
-            cout << "Enter second number: ";
-            cin >> num2;
+main(){
+      int n;
+        cout<<"Enter the number of students:  ";
+        cin>>n;
+      string names[n];
+      for(int i = 0 ; i < n ; i = i + 1)
+      {
+          cout<<"Enter the names of students "<<i<<":  ";
+          cin>>names[i];
+      }
+        for(int i = 0 ; i < n ; i = i + 1)
+        {
+            for(int j = 0 ; j < n-1 ; j = j + 1)
+            {
+                if(names[j] > names[j+1])
+                {
+                    string temp = names[j];
+                    names[j] = names[j+1];
+                    names[j+1] = temp;
+                }
+            }
+        }
+        cout<<"The names in alphabetical order are:  "<<endl;
+        for(int i = 0 ; i < n ; i = i + 1)
+        {
+            cout<<names[i]<<endl;
         }
 
-        if (choice == 1) {
-            cout << "Result: " << num1 + num2 << endl;
-        }
-        else if (choice == 2) {
-            cout << "Result: " << num1 - num2 << endl;
-        }
-        else if (choice == 3) {
-            cout << "Result: " << num1 * num2 << endl;
-        }
-        else if (choice == 4) {
-            if (num2 == 0)
-                cout << "Error: Division by zero!\n";
-            else
-                cout << "Result: " << num1 / num2 << endl;
-        }
-        else if (choice == 5) {
-            cout << "Screen cleared!\n";
-        }
-        else if (choice == 6) {
-            cout << "Exiting Calculator. Goodbye!\n";
-        }
-        else {
-            cout << "Invalid choice!\n";
-        }
     }
-
-    return 0;
-}
- 

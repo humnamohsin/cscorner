@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 main(){
-      for(int i = 0 ; i <= 2 ; i++) //outer loop for rows
+      int sum = 0;
+      float average = 0;
+      int numbers[5] = {1 , 2 , 3 , 4 , 5};
+      for(int idx = 0 ; idx < 5 ; idx = idx + 1)
       {
-        for(int j = 1 ; j <= 3 ; j++) //inner loop for columns
-        {
-            cout<<" * ";
-        }
-        cout<<endl;
+          sum = sum + numbers[idx];
       }
+      average = sum/5;
+      cout<< "Sum: "<<sum<<endl;
+      cout<<"Average: "<<average<<endl;
 }

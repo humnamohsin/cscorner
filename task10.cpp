@@ -1,32 +1,21 @@
 #include <iostream>
 using namespace std;
 main(){
-      while(true){
-        int choice;
+      string names[5];
+      cout<<"Enter 1st student Name:  ";
+      cin>>names[0];
+      cout<<"Enter 2nd student Name:  ";
+      cin>>names[1];
+      cout<<"Enter 3rd student Name:  ";
+      cin>>names[2];
+      cout<<"Enter 4th student Name:  ";
+      cin>>names[3];
+      cout<<"Enter 5th student Name:  ";
+      cin>>names[4];
 
-        cout<<"\n ===== MENU ====="<<endl;
-        cout<<"1. Say Hello"<<endl;
-        cout<<"2. Say Goodbye"<<endl;
-        cout<<"3. Exit"<<endl;
-        cout<<"Enter your choice: ";
-        cin>>choice;
-
-        if (choice == 1)
-        {
-            cout<<"Hello!Welcome to the program."<<endl;
-        }
-        else if (choice == 2)
-        {
-            cout<<"Goodbye!Have a nice day."<<endl;
-        }
-        else if(choice == 3) 
-        {
-            cout<<"Program ended." <<endl;
-            break; 
-        }
-        else{
-            cout<<"Invalid choice!"<<endl;
-        }
-        
-      }
+      cout<<"The first student name is: "<<names[0]<<endl;
+      cout<<"The second student name is: "<<names[1]<<endl;
+      cout<<"The third student name is: "<<names[2]<<endl;
+      cout<<"The fourth student name is: "<<names[3]<<endl;
+      cout<<"The fifth student name is: "<<names[4]<<endl;
 }

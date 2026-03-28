@@ -1,12 +1,20 @@
 #include <iostream>
 using namespace std;
 main(){
-      for(int i= 0 ; i < 5 ; i++){
-        int number = 5;
-        for(int j = 0 ; j <= i ; j++){
-            cout<<number<<" ";
-            number--;
-        }
-        cout<<endl;
+      int n;
+      cout<<"Enter the number of elements:  ";
+      cin>>n;
+      int arr[n];
+      for(int i = 0 ; i < n ; i = i + 1)
+      {
+          cout<<"Enter element "<<i<<":  ";
+          cin>>arr[i];
       }
+
+      for(int i = 0 ; i < n ; i = i + 1)
+      {
+          cout<<"Element "<<i<<" is: "<<arr[i]<<endl;
       }
+    }
+
+  
