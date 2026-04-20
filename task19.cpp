@@ -1,25 +1,40 @@
 #include <iostream>
 using namespace std;
-int main(){
-      int n;
-      cout<<"Enter the number of elements: ";
-      cin>>n;
-      if(n <= 0 )
-      {
-        cout<<"Invalid input! Number of elements must be greater than 0."<<endl;
-        return 0;
-      }
-      int arr[n];
-      cout<<"Enter "<<n<<" numbers, one per line: "<<endl;
-      for(int i = 0 ; i < n ; i++)
-      {
-        cin>>arr[i];
-      }
-      cout<<"Numbers in reverse order: "<<endl;
-      for(int i = n - 1 ; i >= 0 ; i--)
-      {
-        cout<<arr[i]<<" ";
-      }
-      cout<<endl;
-      return 0;
-    }
+
+float calculateSalary(float base, int score, int experience)
+{
+    float bonus = 0;
+
+    if (score >= 90)
+        bonus = 0.20;
+    else if (score >= 75)
+        bonus = 0.10;
+    else
+        bonus = 0.05;
+
+    if (experience >= 5)
+        bonus += 0.05;
+
+    float finalSalary = base + (base * bonus);
+
+    return finalSalary;
+}
+
+int main()
+{
+    float base;
+    int score, experience;
+
+    cout << "Enter base salary: ";
+    cin >> base;
+
+    cout << "Enter score: ";
+    cin >> score;
+
+    cout << "Enter experience (years): ";
+    cin >> experience;
+
+    cout << "Final Salary: " << calculateSalary(base, score, experience);
+
+    return 0;
+}

@@ -1,83 +1,38 @@
 #include <iostream>
-using namespace std; 
-int main(){
-      int correctPIN = 1234;
-      int pin[3];        //Array to store PIN attempts
-      int choice;
-      int balance = 1000; // Initial balance
-      int amount;
-      bool login = false;
-      //PIN attempts using for loop
-      for(int i = 0; i < 3; i++)
-      {
-        cout<<"Enter ATM PIN: ";
-        cin>>pin[i];
-        if(pin[i] == correctPIN)
-        {
-          login = true;
-          cout<<"Login successful!\n";
-          break;
-        }
-        else
-        {
-          cout<<"Incorrect PIN.\n";
-        }
-    }
-    //If login successful
-    if(login == true)
-    { 
-      while(true)
-      {
-        cout<<"\n--- ATM Menu ---\n";
-        cout<<"1. Check Balance\n";
-        cout<<"2. Deposit Money\n";
-        cout<<"3. Withdraw Money\n";
-        cout<<"4. Exit\n";
-        cout<<"Enter your choice: ";
-        cin>>choice;
-        if(choice == 1)
-        {
-            cout<<"Current Balance: "<<balance<<endl;
-        }
-        else if(choice == 2)
-        {
-            cout<<"Enter amount to deposit: ";
-            cin>>amount;
-            balance = balance +  amount;
-            cout<<"Updated Balance: "<<balance<<endl;
-        }
-        else if(choice == 3)
-        {
-            cout<<"Enter amount to withdraw: ";
-            cin>>amount;
+using namespace std;
 
-            if(amount<=balance&&amount>0)
-            {
-                balance = balance - amount;
-                cout<<"Remaining Balance: "<<balance<<endl;
-            }
-            else
-            {
-                cout<<"Insufficient balance.\n";
-            }
-        }
-            else if(choice == 4)
-            {
-                cout<<"Thank you for using the ATM.\n";
-                break;  //Exit the loop
-            }
-            else
-            {
-                cout<<"Invalid Choice\n";
-            }
-          }
-        }
-        else
-        {
-            cout<<"Too many incorrect attempts.Access Denied.\n";
-        }
-        return 0;
-    }
+float calculateBalance(float balance, int years)
+{
+    float interest = 0;
 
+    if (balance < 10000)
+        interest = 0.05;
+    else if (balance <= 50000)
+        interest = 0.07;
+    else
+        interest = 0.10;
 
-        
+    if (years >= 3)
+        interest += 0.02;
+
+    float updatedBalance = balance + (balance * interest);
+
+    return updatedBalance;
+}
+
+int main()
+{
+    float balance;
+    int years;
+
+    cout << "Enter Balance: ";
+    cin >> balance;
+
+    cout << "Enter Years: ";
+    cin >> years;
+
+    cout << "Updated Balance: " << calculateBalance(balance, years);
+
+    return 0;
+}
+  

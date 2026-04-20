@@ -1,31 +1,31 @@
 #include <iostream>
 using namespace std;
-main(){
-      int n;
-        cout<<"Enter the number of students:  ";
-        cin>>n;
-      string names[n];
-      for(int i = 0 ; i < n ; i = i + 1)
-      {
-          cout<<"Enter the names of students "<<i<<":  ";
-          cin>>names[i];
-      }
-        for(int i = 0 ; i < n ; i = i + 1)
-        {
-            for(int j = 0 ; j < n-1 ; j = j + 1)
-            {
-                if(names[j] > names[j+1])
-                {
-                    string temp = names[j];
-                    names[j] = names[j+1];
-                    names[j+1] = temp;
-                }
-            }
-        }
-        cout<<"The names in alphabetical order are:  "<<endl;
-        for(int i = 0 ; i < n ; i = i + 1)
-        {
-            cout<<names[i]<<endl;
-        }
 
-    }
+string numberToText(int num)
+{
+    string ones[] = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+    string teens[] = {"Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
+                      "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+    string tens[] = {"", "", "Twenty", "Thirty", "Forty", "Fifty",
+                     "Sixty", "Seventy", "Eighty", "Ninety"};
+
+    if (num >= 1 && num <= 9)
+        return ones[num];
+
+    else if (num >= 10 && num <= 19)
+        return teens[num - 10];
+
+    else
+        return tens[num / 10] + ones[num % 10];
+}
+
+int main()
+{
+    int num;
+    cout << "Enter a number (1-99): ";
+    cin >> num;
+
+    cout << numberToText(num);
+
+    return 0;
+}

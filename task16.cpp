@@ -1,15 +1,34 @@
 #include <iostream>
 using namespace std;
-main(){
-      char word[100];
 
-      cout<<"Enter a word: ";
-      cin>>word;
+string pyramidVolume(float l, float w, float h, string unit)
+{
+    // volume in meters
+    float volume = (l * w * h) / 3;
 
-      cout<<"\nAlphabets and their positions:\n";
+    if (unit == "millimeters")
+        volume *= (1000 * 1000 * 1000);
+    else if (unit == "centimeters")
+        volume *= (100 * 100 * 100);
+    else if (unit == "kilometers")
+        volume /= (1000 * 1000 * 1000);
+    // meters = no change
 
-      for(int i = 0 ; word[i] != '\0' ; i++)
-      {
-        cout<<word[i]<<" is found at position "<<i<<endl;
-      }
-    }
+    return to_string(volume) + " cubic " + unit;
+}
+
+int main()
+{
+    float l, w, h;
+    string unit;
+
+    cout << "Enter length, width, height (in meters): ";
+    cin >> l >> w >> h;
+
+    cout << "Enter output unit (millimeters, centimeters, meters, kilometers): ";
+    cin >> unit;
+
+    cout << pyramidVolume(l, w, h, unit);
+
+    return 0;
+}

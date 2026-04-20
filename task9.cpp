@@ -1,32 +1,30 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
+bool isSymmetrical(int num)
+{
+    int original = num;
+    int reverse = 0;
 
-    int arr[100];  // fixed size array
-
-    for(int i = 0; i < n; i++){
-        cout << "Enter element " << i + 1 << ": ";
-        cin >> arr[i];
+    while (num > 0)
+    {
+        reverse = reverse * 10 + num % 10;
+        num /= 10;
     }
 
-    int largest = arr[0];
-    int smallest = arr[0];
+    return original == reverse;
+}
 
-    for(int i = 1; i < n; i++){
-        if(arr[i] > largest){
-            largest = arr[i];
-        }
-        if(arr[i] < smallest){
-            smallest = arr[i];
-        }
-    }
+int main()
+{
+    int num;
+    cout << "Enter a three-digit number: ";
+    cin >> num;
 
-    cout << "Largest number: " << largest << endl;
-    cout << "Smallest number: " << smallest << endl;
+    if (isSymmetrical(num))
+        cout << "The number is symmetrical.";
+    else
+        cout << "The number is not symmetrical.";
 
     return 0;
 }

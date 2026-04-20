@@ -1,19 +1,15 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-main(){
-      int numbers[5];
-      cout<<"Enter 1st Number:  ";
-      cin>>numbers[0];
-      cout<<"Enter 2nd Number:  ";
-      cin>>numbers[1];
-      cout<<"Enter 3rd Number:  ";
-      cin>>numbers[2];
-      cout<<"Enter 4th Number:  ";
-      cin>>numbers[3];
-      cout<<"Enter 5th Number:  ";
-      cin>>numbers[4];
 
-      cout<<"The second element in array is: "<<numbers[1]<<endl;
-      cout<<"The fourth element in array is: "<<numbers[3]<<endl;
+int main()
+{
+    int number1,number2;
+    cout<<"Enter Number01: ";
+    cin>>number1;
+    cout<<"Enter Number02: ";
+    cin>>number2;
+    cout<<"Greater Number: " << max(number1,number2);
+    return 0;
     
 }
